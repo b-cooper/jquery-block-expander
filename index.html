@@ -1,52 +1,53 @@
 <html>
-	<body>
+	<head>
 		<!--roboto font from google-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:100,700' rel='stylesheet' type='text/css'>
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<style>
+			/* Sticky footer styles
+			-------------------------------------------------- */
+			html {
+			  position: relative;
+			  min-height: 100%;
+			}
+			body {
+			  /* Margin bottom by footer height */
+			  margin-bottom: 60px;
+			}
+			.footer {
+			  position: absolute;
+			  bottom: 0;
+			  width: 100%;
+			  /* Set the fixed height of the footer here */
+			  height: 60px;
+			  background-color: #000000;
+			}
+		</style>
 
 		<style>
-			.vcenter {
-				display: inline-block;
-				vertical-align: middle;
-				float: none;
-			}
-
-			/* now let's undo some CSS 
-			* we are forced upon by bootstrap
-			* and landing-page.css
-			*/
-
-			#mainSearchBtn {width: 100%; }
-			.input-group-btn:last-child>.btn {margin-bottom: 4px;}
-			#searchMain {
-				border-bottom-left-radius:4px;
-				border-top-left-radius:4px;
-			}
-
 			#leftBlock{
-				background-color: rgba(156,95,181,0.3);
+				background-color: #88A063; // rgba(156,95,181,0.3);
 			}
 
 			#middleBlock{
-				background-color: rgba(0,181,136,0.3);
+				background-color: #A7AB6A; //rgba(0,181,136,0.3);
 			}
 
 			#rightBlock{
-				background-color: rgba(0,152,219,0.3);
+				background-color: #915973; //rgba(0,152,219,0.3);
 			}
 
-			#leftBlock > div.row > div.feature-body > h3 > a{
-				color: rgba(156,95,181,1);
-				font-weight: 700;
+			#leftBlock > div.row > div.feature-header > h1{
+				color: #D9E7C3;
 			}
 
-			#middleBlock > div.row > div.feature-body > h3 > a{
-				color: rgba(0,181,136,1);
-				font-weight: 700;
+			#middleBlock > div.row > div.feature-header > h1{
+				color: #F6F8D1;
 			}
 
-			#rightBlock > div.row > div.feature-body > h3 > a{
-				color: rgba(0,152,219,1);
-				font-weight: 700;
+			#rightBlock > div.row > div.feature-header > h1{
+				color: #D2B1C0;
 			}
 
 			.below-nav{
@@ -121,87 +122,100 @@
 					vertical-align: middle;
 					float: none;
 			}
-			
-			.ac_hint {
-				width: 100%;
-				height: 34px;
-				padding: 6px 12px;
-				border-width: 1px;
-				padding-right: 42.5px;
+			body{
+				background-color: #684973;
 			}
-						
-			.form-control{
-				width: inherit;
-			}
-			._ac-wrap,
-			._ac-results{ 
-				width: 100% !important;	
-			}
-			._ac-results a { font-weight: normal; }
-			._ac-results a b { font-weight: bold; }
 		</style>
-	{{ end }}
-
-	{{ define "index/content" }}
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Nav header</li>
+				<li><a href="#">Separated link</a></li>
+				<li><a href="#">One more separated link</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="">Help</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
 		<div class="main-container container-fluid">
 			<div id="featured" class="row below-nav">
 				<div class="pushable col-xs-12 col-lg-4" id="leftBlock">
 					<div class="row block-inner">
 						<div class="feature-header hidden-xs hidden-sm col-md-4 text-right hidden">
-							<h1 class="">COLLABORATE</h1>
+							<h1 class="">JQuery</h1>
 						</div>
 						<div class="feature-pic col-xs-6 col-sm-12 vcenter">
-							<img src="/asset/image/feature_block/Ohio_Collab.png" class="media-object thumb-feature img-responsive center-block">
+							<img src="http://lorempixel.com/g/400/400/people/1" class="media-object thumb-feature img-responsive center-block">
 						</div><!--
 				 --><div class="feature-body col-xs-6 col-md-4 vcenter hidden">
-							<h3>The <a href="http://prematurityresearch.org/ohiocollaborative/">March of Dimes Prematurity Research Center Ohio Collaborative</a> is a unique transdisciplinary and transinstitutional center that has assembled scientists from diverse fields to share knowledge and integrate data systems to transform one another’s perspectives and craft a rich analytic framework to understand the vexing problem of preterm birth. It is one of five <a href="http://prematurityresearch.org/">prematurity research centers</a> established by the <a href="http://www.marchofdimes.org/">March of Dimes</a> dedicated solely to examining, identifying and preventing the causes of preterm birth.</h3>
+							<h3></h3>
 						</div>
 					</div>
 				</div>
 				<div class="pushable col-lg-4 visible-lg-block" id="middleBlock">
 					<div class="row block-inner">
 						<div class="feature-header col-md-4 text-right hidden">
-							<h1 class="">LEARN</h1>
+							<h1 class="">Block</h1>
 						</div>
 						<div class="feature-pic vcenter col-sm-12">
-							<img src="/asset/image/feature_block/WhatIsGS.png" class="media-object thumb-feature img-responsive center-block">
+							<img src="http://lorempixel.com/g/400/400/people/2" class="media-object thumb-feature img-responsive center-block">
 						</div><!--
 					--><div class="feature-body col-md-4 vcenter hidden">
-							<h3>GEneSTATION is a novel data portal that aims to synthesize diverse omics and evolutionary genomic data for pregnancy-related tissues and phenotypes, aiming to advance understanding of the genetic underpinnings of preterm birth. GEneSTATION is maintained by investigators at the <a href="http://prematurityresearch.org/ohiocollaborative/">Ohio Collaborative</a>, one of the five<a href="http://prematurityresearch.org/"> prematurity research centers</a> established with the generous support of the <a href="http://www.marchofdimes.org/">March of Dimes</a>.</h3>
+							<h3></h3>
 						</div>
 					</div>
 				</div>
 				<div class="pushable col-lg-4 visible-lg-block" id="rightBlock">
 					<div class="row block-inner">
 						<div class="feature-header col-md-4 text-right hidden">
-							<h1 class="">DISCOVER</h1>
+							<h1 class="">Expander</h1>
 						</div>
 						<div class="feature-pic vcenter col-sm-12">
-							<img src="/asset/image/feature_block/BMC_Circos.png" class="media-object thumb-feature img-responsive center-block">
+							<img src="http://lorempixel.com/g/400/400/people/3" class="media-object thumb-feature img-responsive center-block">
 						</div><!--
 					--><div class="feature-body col-md-4 vcenter hidden">
-							<h3>GEneSTATION contains gene expression data from more than 100 genome-wide pregnancy studies across multiple gestational tissues and pathologies. In the first systematic analysis of this data, published recently in the journal <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4456776/">BMC Medical Genomics</a>, GEneSTATION scientists synthesize the landscape of PTB transcriptomics research to further our understanding of the genes and pathways involved in PTB subtypes.</h3>
+							<h3></h3>
 						</div>
 					</div>
 				</div>
 			</div><!--/row-->
-			<br>
-			<div class="row">
-				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-						<form class="text-center" role="form" action="/search/gene/" onsubmit="search_main(this);">
-							<div class="form-group has-feedback">
-								<label class="sr-only" for="searchMain">Search</label>	
-								<input type="text" class="form-control" name="main" id="searchMain" placeholder="e.g., FSHR, villous placenta, preeclampsia" size=50 >
-								<span class="glyphicon glyphicon-search form-control-feedback"></span>
-							</div>
-						</form>
-				</div><!--/col-->
-			</div><!--/row-->
-			<br>
-		</div>
-	{{ end }}
+		</div><!--/container-->
+		<footer class="footer">
+		  <div class="container text-right">
+			  <h5 style="color: #777; padding-top: 1%;"><span class="glyphicon glyphicon-copyright-mark"></span> Brian Cooper</h5>
+	          </div>
+	        </footer>	
 
-	{{ define "index/scripts" }}
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script	src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.js"></script>
 		<script src="./js/bootstrap-toolkit.min.js"></script>
 
